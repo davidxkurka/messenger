@@ -31,7 +31,6 @@ class ContainerServiceHandlersLocator implements HandlersLocatorInterface
 	public function getHandlers(Envelope $envelope): iterable
 	{
 		$handlers = [];
-
 		$class = get_class($envelope->getMessage());
 
 		foreach ($this->map[$class] ?? [] as $mapConfig) {
